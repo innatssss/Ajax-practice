@@ -3,11 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moving rectangle</title>
+    <title>Ajax</title>
 
     <link rel="stylesheet" href="./style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="./script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <h2 class="animate-charcter">Submit Artist Name and Song</h2>
+    <form id="songForm">
+      <label for="artistName">Artist Name:</label>
+      <input type="text" id="artistName" name="artistName" /><br /><br />
+      <label for="songTitle">Song Title:</label>
+      <input type="text" id="songTitle" name="songTitle" /><br /><br />
+      <button type="submit">Submit</button>
+    </form>
+    <table id="songTable">
+      <thead>
+        <tr>
+          <th>Song Name</th>
+          <th>Artist</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="output"></div>
+  </body>
 </html>

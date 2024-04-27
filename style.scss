@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Jersey+25&display=swap");
+
 body {
   margin: 0;
   padding: 0;
@@ -14,12 +15,19 @@ body {
   font-size: 4rem;
   color: #e76f51;
   text-transform: uppercase;
-  background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
@@ -30,23 +38,25 @@ body {
     background-position: 200% center;
   }
 }
+
 #songForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  label {
+    color: #ddd;
+    font-size: 2rem;
 }
-#songForm label {
-  color: #ddd;
-  font-size: 2rem;
-}
-#songForm input {
-  color: #ddd;
-  background: rgba(245, 242, 235, 0.3);
-  border: none;
-  height: 2rem;
-  width: 60vw;
-  font-size: 1.5rem;
+  input {
+    color: #ddd;
+    background: rgb(245, 242, 235, 0.3);
+    border: none;
+    height: 2rem;
+    width: 60vw;
+    font-size: 1.5rem;
+  }
 }
 
 button {
@@ -72,31 +82,30 @@ table {
   border-collapse: collapse;
   margin-bottom: 20px;
   color: #ddd;
-  background: rgba(38, 70, 83, 0.3);
+  background: rgb(38, 70, 83, 0.3);
   font-size: 1.5rem;
+  th {
+    background: rgb(38, 70, 83, 0.3);
+  }
+  tr:hover {
+    background: rgb(38, 70, 83, 0.3);
+  }
+  .btn-del {
+    color: #fff;
+    background-color: #e76f51;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    align-self: center;
+    border: none;
+  }
 }
-table th {
-  background: rgba(38, 70, 83, 0.3);
-}
-table tr:hover {
-  background: rgba(38, 70, 83, 0.3);
-}
-table .btn-del {
-  color: #fff;
-  background-color: #e76f51;
-  cursor: pointer;
-  font-size: 1.5rem;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 20px;
-  align-self: center;
-  border: none;
-}
-
 th,
 td {
   border: 1px solid #e76f51;
   padding: 8px;
   text-align: left;
-}/*# sourceMappingURL=style.css.map */
+}
