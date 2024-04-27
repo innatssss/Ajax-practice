@@ -51,3 +51,35 @@ $(document).ready(function () {
     }, 2000);
   });
 });
+
+// Ask a user for age, if the input is not a number or a number over 120 or below 0, show error in console, else print in on the page with a welcome message
+
+$(document).ready(function () {
+  $("#submitAge").click(function () {
+    const ageInput = $("#ageInput").val();
+
+    if (isNaN(ageInput) || ageInput < 0 || ageInput > 120) {
+      console.error("Error: Please enter a valid age between 0 and 120.");
+      return;
+    }
+
+    $("#output-1").show();
+
+    // Validate age using AJAX
+    $.ajax({
+      url: "https://jsonplaceholder.typicode.com/posts",
+      method: "GET",
+      dataType: "json",
+      success: function (response) {
+        if (response.length > 0) {
+          $("#output-1").text("Welcome! Your age is " + ageInput);
+        } else {
+          console.error("Error: Failed to fetch data.");
+        }
+      },
+      error: function (xhr, status, error) {
+        console.error("Error:", error);
+      },
+    });
+  });
+});

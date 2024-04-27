@@ -40,18 +40,21 @@ body {
   color: #ddd;
   font-size: 2rem;
 }
-#songForm input {
+
+input {
   color: #ddd;
   background: rgba(245, 242, 235, 0.3);
   border: none;
   height: 2rem;
   width: 60vw;
   font-size: 1.5rem;
+  margin: 1rem;
 }
 
 button {
   display: flex;
   justify-content: center;
+  margin: 1rem;
   color: #fff;
   background-color: #e76f51;
   cursor: pointer;
@@ -99,4 +102,24 @@ td {
   border: 1px solid #e76f51;
   padding: 8px;
   text-align: left;
+}
+
+#userAge, #song {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#output-1 {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e76f51;
+  position: fixed;
+  top: 0;
+  font-size: 4rem;
+  display: none;
+  text-align: center;
+  padding-top: 64px;
 }/*# sourceMappingURL=style.css.map */
